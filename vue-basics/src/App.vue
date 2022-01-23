@@ -7,8 +7,9 @@
 
   <div>
     <input type="text"
-        v-model="newTask"
-        placeholder="Add a new task"
+      v-model="newTask"
+      @keyup.enter="addTask"
+      placeholder="Add a new task"
     >
   </div>
 
@@ -27,11 +28,19 @@
 
  <ul>
  <!-- V-for loops over task array -->
-    <li v-for="(task, index) in latest" :key="task.id">
+ <!-- @click, fire finishedTask fx & add the attribute class of strikeout -->
+    <li v-for="(task, index) in latest" 
+      :key="task.id" 
+      @click="finishTask(task)"
+      :class[ 
+        task.finished ? 'strikeout' : '',
+        task.postponed ? 'text-gray' : '',
+        'simple-class'
+      ]">
         {{ index + 1 }}. {{ task.name }}
 
         <div v-if="task.finished">
-            <button>Delete task</button>
+          <button @click="removeTask(task.id)">Delete task</button>
         </div>
     </li>
   </ul>
@@ -84,3 +93,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .strikeout {
+      text-decoration: line-through;
+  }
+</style>
