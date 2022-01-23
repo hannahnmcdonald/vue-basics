@@ -65,6 +65,14 @@ export default {
     finishTask(task) {
       task.finished = !task.finished
     }
+    computed: {
+      allTasks() {
+        return this.tasks.length
+      },
+      latest() {
+        return [...this.tasks].reverse()
+      }
+    }
   }
 }
 </script>
