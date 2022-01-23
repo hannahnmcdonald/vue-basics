@@ -1,5 +1,11 @@
 <template>
-  <h1>{{ To Do }}</h1>
+  <h1>{{ title }}</h1>
+
+  <ul>
+    <li v-for="task in tasks" :key="task.id">
+      {{task.id}}. {{ task.name }}
+    </li>
+  </ul>
 </template>
 
 <script>
