@@ -1,6 +1,20 @@
 <template>
   <h1>{{ title }}</h1>
 
+  <h2>Add a new task</h2>
+
+  <div>
+   <input type="text"
+     v-model="newTask"
+     placeholder="Add a new task"
+   >
+  </div>
+
+  <div v-if="newTask.length > 0">
+   <h3>New task preview</h3>
+   <p>{{ newTask }}</p>
+ </div>
+
   <ul>
     <li v-for="task in tasks" :key="task.id">
       {{task.id}}. {{ task.name }}
@@ -15,6 +29,7 @@
         </div>
     </li>
   </ul>
+
 </template>
 
 <script>
