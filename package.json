@@ -1,0 +1,22 @@
+{
+  "name": "vue-basics",
+  "version": "1.0.0",
+  "description": "Learning the basics of Vue.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannahnmcdonald/vue-basics.git"
+  },
+  "keywords": [
+    "Vue"
+  ],
+  "author": "Hannah McDonald",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hannahnmcdonald/vue-basics/issues"
+  },
+  "homepage": "https://github.com/hannahnmcdonald/vue-basics#readme"
+}
