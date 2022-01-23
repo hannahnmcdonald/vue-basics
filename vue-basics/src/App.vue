@@ -7,6 +7,12 @@
         <div v-if="task.finished">
             <button>Delete task</button>
         </div>
+         <div v-else-if="task.edit">
+            <button>Edit task</button>
+        </div>
+        <div v-else>
+            <p>No button</>
+        </div>
     </li>
   </ul>
 </template>
