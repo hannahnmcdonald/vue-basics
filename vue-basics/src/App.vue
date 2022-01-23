@@ -10,6 +10,14 @@
     >
   </div>
 
+  <button
+      @click="addTask"
+      :disabled="newTask.length < 1"
+    >
+      Add task
+    </button>
+  </div>
+
   <div v-if="newTask.length > 0">
     <h3>New task preview</h3>
     <p>{{ newTask }}</p>
