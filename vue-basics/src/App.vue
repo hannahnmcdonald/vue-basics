@@ -28,6 +28,7 @@
 
  <ul>
  <!-- V-for loops over task array -->
+ <!-- @click is the same as v-on:click -->
  <!-- @click, fire finishedTask fx & add the attribute class of strikeout -->
     <li v-for="(task, index) in latest" 
       :key="task.id" 
